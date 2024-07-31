@@ -1,0 +1,117 @@
+/* styles/navbar.css */
+.navbar {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  font-family: Arial, sans-serif;
+}
+
+.navbar-link {
+  color: #333333b2;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #007bff;
+}
+
+.navbar-link.active {
+  color: #007bff;
+}
+
+.navbar-actions {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.location,
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-history-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-history-button:hover {
+  background-color: #0056b3;
+}
+
+/* styles/orderHistory.css */
+.order-history {
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  width: 300px;
+  max-height: 80%;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.close-button {
+  background-color: #ff5f5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.order-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  /* margin-left: -50rem; */
+  display: flex;
+  align-items: center;
+}
