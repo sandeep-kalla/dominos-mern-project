@@ -5,6 +5,7 @@ import { getApi } from '../../../shared/services/api-client';
 import { CartView } from '../../carts/pages/CartView';
 import { CartContext } from '../context/cart-context';
 import { Navbar } from '../../../shared/components/NavBar';
+import Loading from "../../../shared/widgets/Loading";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -57,8 +58,8 @@ export const DashBoard = () => {
   const getProducts = async () => {
     const data = await getApi();
     console.log('Products ', data);
-    setLoading(false);
     setProducts(data);
+    setLoading(true); // Trigger the loading bar
   };
 
   return (
@@ -70,7 +71,7 @@ export const DashBoard = () => {
           <div className='col-8'>
             <div className='row'>
               {loading ? (
-                <p>Loading...</p>
+                <Loading setLoading={setLoading} />
               ) : (
                 <Products products={searchResults.length ? searchResults : products} />
               )}
